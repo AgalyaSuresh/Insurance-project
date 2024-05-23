@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Claiming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "30fc2b89-b7ec-4a8a-9ac7-19acf732604b", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "0706fec2-d800-4ebc-8133-d849aa4ffe44", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+
+<header>
+    <h1>Health Insurance Claiming</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/Insurance.html">Insurance Plans</a>
+    <a href="/Coverage Details.html">Coverage Details</a>
+    <a href="/Claim Process.html">Claim Process</a>
+    <a href="/Customer Support.html">Customer Support</a>
+</nav>
+
+
+<section>
+    <h2>Claiming Process</h2>
+    <p>Welcome to our health insurance claiming portal. Here, you can file your health insurance claims easily.</p>
+    <p>Please fill out the form below with the necessary details:</p>
+    <form action="claim_submit.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="policy_number">Policy Number:</label><br>
+        <input type="text" id="policy_number" name="policy_number" required><br>
+        <label for="date_of_visit">Date of Visit:</label><br>
+        <input type="date" id="date_of_visit" name="date_of_visit" required><br>
+        <label for="claim_amount">Claim Amount:</label><br>
+        <input type="text" id="claim_amount" name="claim_amount" required><br>
+        <label for="reason">Reason for Claim:</label><br>
+        <textarea id="reason" name="reason" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+</body>
+</html>
